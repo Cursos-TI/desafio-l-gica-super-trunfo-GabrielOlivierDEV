@@ -103,19 +103,31 @@ int main() {
     scanf("%d", &escolha1);
 
     printf("\n--- Escolha o segundo atributo (diferente do primeiro) ---\n");
-    for (int i = 1; i <= 7; i++) {
-        if (i == escolha1) continue; // não mostra o já escolhido
-        switch(i) {
-            case 1: printf("1: População\n"); break;
-            case 2: printf("2: Área\n"); break;
-            case 3: printf("3: PIB\n"); break;
-            case 4: printf("4: Pontos Turísticos\n"); break;
-            case 5: printf("5: Densidade Demográfica\n"); break;
-            case 6: printf("6: PIB per Capita\n"); break;
-            case 7: printf("7: SuperPoder\n"); break;
-        }
+
+    if (escolha1 != 1) {
+        printf("1: População\n");
     }
+    if (escolha1 != 2) {
+        printf("2: Área\n");
+    }
+    if (escolha1 != 3) {
+        printf("3: PIB\n");
+    }
+    if (escolha1 != 4) {
+        printf("4: Pontos Turísticos\n");
+    }
+    if (escolha1 != 5) {
+        printf("5: Densidade Demográfica\n");
+    }
+    if (escolha1 != 6) {
+        printf("6: PIB per Capita\n");
+    }
+    if (escolha1 != 7) {
+        printf("7: SuperPoder\n");
+    }
+
     scanf("%d", &escolha2);
+
 
     // Função auxiliar para pegar valor do atributo
     float valor1_c1 = 0, valor1_c2 = 0;
