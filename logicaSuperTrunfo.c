@@ -165,6 +165,44 @@ int main() {
     else
         resultado2 = (valor2_c1 > valor2_c2) ? 1 : (valor2_c1 < valor2_c2 ? 2 : 0);
 
+    // Mostrar os dois atributos comparados
+    printf("\n--- Comparação Individual ---\n");
+
+    switch (escolha1) {
+        case 1: printf("População: %lu vs %lu\n", populacao_1, populacao_2); break;
+        case 2: printf("Área: %.2f vs %.2f\n", area_1, area_2); break;
+        case 3: printf("PIB: %.2f vs %.2f\n", pib_1, pib_2); break;
+        case 4: printf("Pontos Turísticos: %d vs %d\n", pontos_turisticos_1, pontos_turisticos_2); break;
+        case 5: printf("Densidade: %.2f vs %.2f\n", densidade_1, densidade_2); break;
+        case 6: printf("PIB per Capita: %.2f vs %.2f\n", pib_per_capita_1, pib_per_capita_2); break;
+        case 7: printf("SuperPoder: %.2f vs %.2f\n", super_poder_1, super_poder_2); break;
+    }
+
+    if (resultado1 == 1)
+        printf("Vencedor do primeiro atributo: %s\n", nome_1);
+    else if (resultado1 == 2)
+        printf("Vencedor do primeiro atributo: %s\n", nome_2);
+    else
+        printf("Empate no primeiro atributo!\n");
+    
+    switch (escolha2) {
+        case 1: printf("População: %lu vs %lu\n", populacao_1, populacao_2); break;
+        case 2: printf("Área: %.2f vs %.2f\n", area_1, area_2); break;
+        case 3: printf("PIB: %.2f vs %.2f\n", pib_1, pib_2); break;
+        case 4: printf("Pontos Turísticos: %d vs %d\n", pontos_turisticos_1, pontos_turisticos_2); break;
+        case 5: printf("Densidade: %.2f vs %.2f\n", densidade_1, densidade_2); break;
+        case 6: printf("PIB per Capita: %.2f vs %.2f\n", pib_per_capita_1, pib_per_capita_2); break;
+        case 7: printf("SuperPoder: %.2f vs %.2f\n", super_poder_1, super_poder_2); break;
+    }
+
+    if (resultado2 == 1)
+        printf("Vencedor do segundo atributo: %s\n", nome_1);
+    else if (resultado2 == 2)
+        printf("Vencedor do segundo atributo: %s\n", nome_2);
+    else
+        printf("Empate no segundo atributo!\n");
+
+
     // Soma dos atributos
     float soma1 = valor1_c1 + valor2_c1;
     float soma2 = valor1_c2 + valor2_c2;
