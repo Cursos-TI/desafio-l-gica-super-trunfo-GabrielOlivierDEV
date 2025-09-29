@@ -100,7 +100,13 @@ int main() {
     // Menu para o usuário escolher dois atributos diferentes
     printf("\n--- Escolha o primeiro atributo para comparação ---\n");
     printf("1: População\n2: Área\n3: PIB\n4: Pontos Turísticos\n5: Densidade Demográfica\n6: PIB per Capita\n7: SuperPoder\n");
+
     scanf("%d", &escolha1);
+
+    if (escolha1 < 1 || escolha1 > 7) {
+        printf("Erro: Escolha inválida!\n");
+        return 1; // Encerra o programa com erro
+    }
 
     printf("\n--- Escolha o segundo atributo (diferente do primeiro) ---\n");
 
@@ -128,6 +134,15 @@ int main() {
 
     scanf("%d", &escolha2);
 
+    if (escolha2 == escolha1) {
+        printf("Erro: Você deve escolher dois atributos diferentes!\n");
+        return 1; // Encerra o programa com erro
+    }
+
+    if (escolha2 < 1 || escolha2 > 7) {
+        printf("Erro: Escolha inválida!\n");
+        return 1; // Encerra o programa com erro
+    }
 
     // Função auxiliar para pegar valor do atributo
     float valor1_c1 = 0, valor1_c2 = 0;
